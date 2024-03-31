@@ -429,11 +429,11 @@ Apibtn.addEventListener("click", () => {
 
 cross.addEventListener("click", () => {
   const Apiinp = document.querySelectorAll(".Apiinp");
-  if (!(Apiinp[0].value && Apiinp[1].value)) {
-      alert("You have not entered the API key. Click OK to continue.")
-  }
+  if (Apiinp[0].value && Apiinp[1].value) {
   apiMain.classList.replace("z-ind1", "z-ind");
   apiMain.classList.add("dispnone");
-  main.classList.remove("blur");
-  
+  main.classList.remove("blur");}
+  else{
+   alert("You have not entered the API key.")
+  }
 });
